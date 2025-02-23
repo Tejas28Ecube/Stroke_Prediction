@@ -1,14 +1,9 @@
 import streamlit as st
 import pandas as pd
 from joblib import load
-import os
 
 # Load the model
-# Get the directory of the current script
-current_dir = os.path.dirname(__file__)
-
-# Construct the path to the model file
-model_path = os.path.join(current_dir, 'best_XGBoost.pkl')
+model_path = 'best_XGBoost.pkl'
 model = load(model_path)
 
 def predict_stroke(data):
